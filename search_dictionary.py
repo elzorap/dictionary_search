@@ -5,8 +5,6 @@ In cazul in care nu este gasit cuvantul in dictionar se va ridica o eroare
 definita de utilizator WordNotFoundError
 """
 
-from typing import Dict
-
 
 class Error(Exception):
     """Clasa de baza pentru exceptii definite de utilizator"""
@@ -32,7 +30,7 @@ class Dict:
         display(self)
             - afiseaza perechile cuvant: traducere (valorile din dictionar)
         search(self, word)
-            - cauta cuvantul word in dictionar 
+            - cauta cuvantul word in dictionar
                 - si afiseaza traducerea daca este gasit
                 - altfel, ridica exceptia WordNotFoundError
         count():
