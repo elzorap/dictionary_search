@@ -46,6 +46,7 @@ class Dict:
             self.words = {}
         else:
             self.words = initial_words.copy()
+            Dict.total += len(initial_words)
 
     def add(self, word, translation):
         self.words[word] = translation
@@ -72,7 +73,8 @@ class Dict:
 
 
 def main():
-    d = Dict('Dictionar Roman Englez')
+    d = Dict('Dictionar Roman Englez', {
+             'mare': 'sea', 'calculator': 'computer'})
     d.add('zi', 'day')
     d.add('ora', 'hour')
     d.add('soare', 'sun')
